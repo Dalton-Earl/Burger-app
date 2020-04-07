@@ -7,7 +7,14 @@ var connection;
 
 if(process.env.JAWSDB_URL){
   console.log("you do it?");
-  connection = mysql.createConnection(process.env.JAWSDB_URL);
+  connection = mysql.createConnection({
+    host: 'nba02whlntki5w2p.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
+  user: "imzil0wti1pz4lod",
+  password: "siuzoice5fn77nha",
+  database: 'egdxrj99k9nul3i8'
+}
+
+  );
 }else {
   console.log("not quite!")
   connection = mysql.createConnection({
